@@ -1,34 +1,13 @@
+### Intro:
+
+In this small project, I build a Sudoku solving application in Streamlit. We
+train a computer vision model to recognize numbers in the 9x9 grid and use a backtracking algorithm to solve the actual puzzle.
 
 
-[![DOI](https://zenodo.org/badge/259007650.svg)](https://zenodo.org/badge/latestdoi/259007650)
-
-# sudoku_solver
-Code for : [https://towardsdatascience.com/building-a-sudoku-solving-application-with-computer-vision-and-backtracking-19668d0a1e2]()
-
-### Run
+### How to Run
 ```
 bash run_app.sh
 ```
-
-## Intro
-
-A Sudoku is a logic-based puzzle that usually comes in the form of a 9x9 grid
-and 3x3 sub-grids of 1 to 9 digits. The condition to have a valid solution to
-this puzzle is that no digit is used twice in any row, column, or 3x3 sub-grid.
-
-The number of possible 9x9 grids is 6.67×1⁰²¹ so finding a solution can
-sometimes be challenging depending on the initial puzzle. In this project, we
-will build a Streamlit application that can automatically solve Sudoku puzzles
-given a screenshot of one.
-
-We will first build an Object Character Recognition model that can extract
-digits from a Sudoku grid image and then work on a backtracking approach to
-solve it. The final application will be accessible through an easy to use
-Streamlit application.
-
-The Sudoku python representation and the first version of the solver were both
-mostly taken and modified from this Repo:
-[https://github.com/RutledgePaulV/sudoku-generator](https://github.com/RutledgePaulV/sudoku-generator)
 
 ### Object Character Recognition
 
@@ -68,8 +47,7 @@ pixel of the input image, if it is part of a digit or not.
 
 <span class="figcaption_hack">Characters extracted from the grid above</span>
 
-The recognizer model’s role is to take as input a single digit and predict which
-one it is from the set {1, 2, 3, 4, 5, 6, 7, 8, 9}. It is a mostly convolutional
+. It is a mostly convolutional
 network but the output is a fully connected layer with softmax activation.
 
 #### Data-set
@@ -187,11 +165,6 @@ unsafe_allow_html=True.
 
 ![](https://cdn-images-1.medium.com/max/2560/1*v1bArKhF6rA0KvMxRfUg1g.png)
 
-### Conclusion :
-
-In this small project, we build a Sudoku solving application in Streamlit. We
-train a custom OCR model along the way and use backtracking to solve the actual
-Sudoku grid.
 
 
 References :
