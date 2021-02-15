@@ -1,59 +1,34 @@
-### Intro:
+##### Intro:
 
 In this small project, I build a Sudoku solving application in Streamlit. We
 train a computer vision model to recognize numbers in the 9x9 grid and use a backtracking algorithm to solve the actual puzzle.
 
 
-### How to Run
+##### How to Run
 ```
 bash run_app.sh
 ```
 
-### Object Character Recognition
+##### Digit Detection
 
-![](https://cdn-images-1.medium.com/max/800/1*-oZUiyeOi3y-qYChxuxtGQ.png)
-<span class="figcaption_hack">  
-Image Source:
-[https://en.wikipedia.org/wiki/Sudoku](https://en.wikipedia.org/wiki/Sudoku)</span>
+To solve the sudoku puzzle we need to build a digit detector model and then a digit recognizer
+model. The detection model will tell us where a digit appears in the image and
+the recognition model will tell us which digit it is. We will also generate a dataset for
+both models.
 
-Once we have an image of a puzzle we need to extract all the digits that are
-written there, as well as their position.
+#### Detection Model
 
-To do that, we will train a digit detector model and then a digit recognizer
-model. The first one will tell us where does a digit appears in the image and
-the second one will tell us which digit it is. We will also get a data-set for
-both of those tasks.
+The detector model is a fully convolutional neural network which outputs a binary mask 
+predicting whether or not a pixel is apart of a digit.
 
-#### Detector Model
+#### Recognition Model
 
-The detector model we will use is based on a fully convolutional neural network
-with skip connections, very similar to what we used in previous projects like :
-
-* [Vessel Segmentation With Python and
-Keras](https://towardsdatascience.com/vessel-segmentation-with-python-and-keras-722f9fb71b21)
-* [Fingerprint Denoising and Inpainting using Fully Convolutional
-Networks](https://towardsdatascience.com/fingerprint-denoising-and-inpainting-using-fully-convolutional-networks-e24714c3233)
-
-You can read those two posts if you want to learn more about image segmentation.
-
-The objective of this model is to output a binary mask that tells us, for each
-pixel of the input image, if it is part of a digit or not.
-
-![](https://cdn-images-1.medium.com/max/800/1*n0f4XJr4CQGZeC2k44-Yvw.png)
-
-#### Recognizer Model
-
-![](https://cdn-images-1.medium.com/max/800/1*CIYBsWqBNv9C9skKILFCLA.png)
-
-<span class="figcaption_hack">Characters extracted from the grid above</span>
-
-. It is a mostly convolutional
-network but the output is a fully connected layer with softmax activation.
+The recognition model is a convolutional neural network which has a fully connected output layer
+with softmax activation predicting the probability of pixels belonging to each digit. 
 
 #### Data-set
 
-To train the two networks described above we need annotated data. Instead of
-manually annotating a bunch of Sudoku grids we can generate a synthetic data-set
+I generated a synthetic dataset to train the detection and recogntion models 
 since it does not cost much and hope it works 😉.
 
 To have a realistic data-set we use multiple types of fonts, sizes, background
