@@ -16,7 +16,7 @@ model. The detection model will tell us where a digit appears in the image and
 the recognition model will tell us which digit it is. We will also generate a dataset for
 both models.
 
-### Detection Model
+#### Detection Model
 
 The detector model is a fully convolutional neural network which outputs a binary mask 
 predicting whether or not a pixel is apart of a digit.
