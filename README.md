@@ -1,6 +1,6 @@
 #### Intro:
 
-In this small project, I build a Sudoku solving application in Streamlit. We
+In this small project, I build a Sudoku solving application in Streamlit. I
 train a computer vision model to recognize numbers in the 9x9 grid and use a backtracking algorithm to solve the actual puzzle.
 
 
