@@ -19,10 +19,6 @@ st.sidebar.markdown(
     <p>
     Upload an image of a sudoku grid and get the solved state.
     </p>
-    <img src='https://raw.githubusercontent.com/CVxTz/sudoku_solver/master/solver/samples/wiki_sudoku.png'
-         width="300"></br>
-    Image source : <a href='https://en.wikipedia.org/wiki/Sudoku'>Wikipedia Sudoku</a>
-
     """,
     unsafe_allow_html=True,
 )
