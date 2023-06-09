@@ -1,0 +1,56 @@
+**Prompt: Wire Transfer Information Extraction**
+
+**Goal:** Extract the necessary information from an email to process a wire transfer.
+
+**Email Content:**
+[Insert email content here]
+
+**Required Information:**
+- Sender's name:
+- Sender's account number:
+- Recipient's name:
+- Recipient's account number:
+- Transfer amount:
+- Purpose of transfer:
+
+**Instructions:** 
+1. Read the given email carefully.
+2. Identify and extract the required information mentioned above.
+3. If any information is missing or not explicitly stated, make reasonable assumptions based on the context.
+4. Format the extracted information in a clear and organized manner.
+
+**Example:**
+
+**Email Content:**
+Subject: Wire Transfer Request
+
+Dear Accounting Team,
+
+I would like to request a wire transfer to be made from my account to the following recipient:
+
+Recipient Name: John Smith
+Recipient Account Number: 123456789
+
+Transfer Amount: $5000
+Purpose of Transfer: Monthly rent payment
+
+Please let me know if any additional information is required.
+
+Best regards,
+Alice Johnson
+
+**Required Information:**
+- Sender's name: Alice Johnson
+- Sender's account number: [Assume it's the account from which the wire transfer is requested]
+- Recipient's name: John Smith
+- Recipient's account number: 123456789
+- Transfer amount: $5000
+- Purpose of transfer: Monthly rent payment
+
+**Extracted Information:**
+- Sender's name: Alice Johnson
+- Sender's account number: [Assume it's the account from which the wire transfer is requested]
+- Recipient's name: John Smith
+- Recipient's account number: 123456789
+- Transfer amount: $5000
+- Purpose of transfer: Monthly rent payment
