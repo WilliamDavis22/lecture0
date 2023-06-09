@@ -1,0 +1,74 @@
+**Prompt: Wire Transfer Information Extraction**
+
+**Goal:** Extract the necessary information from an email to process a wire transfer.
+
+**Email Content:**
+To: clarence.witt@citi.com
+From: Mitchell@clientsgood.com
+Subject: Wire Transfer
+
+Dear Clarence,
+Please move €26586.80 to the Clients Good Inc. discretionary escrow account (485960703) at Bank of America from my personal checking account # 47586970 at Citi. ABA: 021030450. Ref: Invoice 47586B.
+
+Thanks,
+Mitchell Goodman, CFO
+
+**Required Information:**
+- Currency:
+- Sender's name:
+- Sender's account number:
+- Recipient's name:
+- Recipient's account number:
+- Transfer amount:
+- Purpose of transfer:
+
+**Instructions:** 
+1. Read the given email carefully.
+2. Identify and extract the required information mentioned above.
+3. If any information is missing or not explicitly stated, leave the extracted entity blank.
+4. Format the extracted information in a clear and organized manner.
+
+**Example:**
+
+**Email Content:**
+Subject: Wire Transfer Request
+
+Dear Accounting Team,
+
+I would like to request a wire transfer to be made from my account to the following recipient:
+
+Recipient Name: John Smith
+Recipient Account Number: 123456789
+
+Transfer Amount: $5000
+Purpose of Transfer: Monthly rent payment
+
+Please let me know if any additional information is required.
+
+Best regards,
+Alice Johnson
+
+**Extracted Information:**
+- Currency: $ (USD)
+- Sender's name: Alice Johnson
+- Sender's account number: ""
+- Recipient's name: John Smith
+- Recipient's account number: 123456789
+- Transfer amount: $5000
+- Purpose of transfer: Monthly rent payment
+
+
+
+OUTPUT OF GPT:
+
+"""
+Extracted Information:
+
+Currency: € (EUR)
+Sender's name: Mitchell Goodman
+Sender's account number: 47586970
+Recipient's name: Clients Good Inc.
+Recipient's account number: 485960703
+Transfer amount: €26586.80
+Purpose of transfer: Invoice 47586B
+"""
